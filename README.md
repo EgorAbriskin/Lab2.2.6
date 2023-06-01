@@ -57,3 +57,11 @@ count += 1
 count += count_left_children(node.left)
 count += count_left_children(node.left.right)
 return count
+
+def print_leaf_nodes(node):
+if node is None:
+return
+if node.left is None and node.right is None:
+print(node.value)
+print_leaf_nodes(node.left)
+print_leaf_nodes(node.right)
